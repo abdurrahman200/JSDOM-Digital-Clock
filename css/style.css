@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+:root {
+    --purple-dark: #04456b;
+    --purple-light: #04456b;
+    --gray-light: #E5E3E8;
+    --gray-dark: #04456b;
+    --light: #fcf8fb;
+    --transition: all 150ms cubic-bezier(.46, 1.13, .67, .87);
+}
+
+.clock-card {
+    width: 400px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 50px;
+    background-color: var(--purple-dark);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.clock-card span {
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: right;
+    display: block;
+    font-weight: 700;
+}
+
+.clock-card p {
+    font-size: 50px;
+    color: var(--light);
+    font-weight: 400;
+}
+
+.clock-card p:first-letter {
+    letter-spacing: 5px;
+}
+
+.card {
+    width: 500px;
+    height: 250px;
+    display: block;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.215), -5px -5px 25px rgba(0, 0, 0, 0.125);
+    background-color: var(--gray-light);
+    position: relative;
+    border: 6px solid #E5E3E8;
+}
+
+.card .top {
+    width: 215px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.card .top p {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--purple-dark);
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.card .bottom {
+    height: 7px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #aaa4b2;
+}
+
+.card .bottom .progress-bar {
+    width: 240px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: #04456b;
+    transition: var(--transition);
+}
+
+.space {
+    --size: 3px;
+    width: var(--size);
+    height: 15px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.space::before {
+    content: '';
+    width: 100%;
+    height: var(--size);
+    background-color: #9892a3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.space::after {
+    content: '';
+    width: 100%;
+    height: var(--size);
+    background-color: #9892a3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    color: var(--purple-light);
+    background-color: var(--purple-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.15;
+    position: relative;
+}
