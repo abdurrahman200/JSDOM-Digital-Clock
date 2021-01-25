@@ -26,7 +26,7 @@
 .clock-card span {
     text-transform: uppercase;
     font-size: 12px;
-    text-align: right;
+    text-align: left;
     display: block;
     font-weight: 700;
 }
